@@ -155,6 +155,13 @@ def map_state_reverse(state):
         state_rev[index] = state[index_rev]
     return state_rev
     
+def zero_state(num_qubits):
+
+    #make initial satate |0>
+    state = QuantumState(num_qubits)
+    
+    return state.set_zero_state().get_vector()
+    
 def compute_state(params,num_qubits,num_layers):
     """ 
     compute state for a given set of params
